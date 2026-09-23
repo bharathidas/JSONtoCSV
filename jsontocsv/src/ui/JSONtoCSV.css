@@ -1,0 +1,261 @@
+.widget-jsontocsv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 100%;
+}
+
+/* Preview card */
+
+.widget-jsontocsv .jsontocsv-preview {
+    align-self: stretch;
+    border: 1px solid var(--border-color-default, #ced0d3);
+    border-radius: var(--border-radius-default, 6px);
+    background: var(--bg-color-secondary, #fff);
+    overflow: hidden;
+}
+
+.widget-jsontocsv .jsontocsv-preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color-default, #ced0d3);
+    background: var(--bg-color, #f8f8f8);
+}
+
+.widget-jsontocsv .jsontocsv-preview-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.widget-jsontocsv .jsontocsv-file-icon {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background: var(--brand-success, #3cb33d);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.widget-jsontocsv .jsontocsv-filename {
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.widget-jsontocsv .jsontocsv-summary {
+    font-size: 0.9em;
+    color: var(--font-color-detail, #6c7180);
+}
+
+.widget-jsontocsv .jsontocsv-summary code {
+    padding: 0 4px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.06);
+    color: inherit;
+}
+
+.widget-jsontocsv .jsontocsv-toggle {
+    flex: none;
+}
+
+.widget-jsontocsv .jsontocsv-preview-body {
+    padding: 12px 16px 16px;
+}
+
+.widget-jsontocsv .jsontocsv-warning {
+    margin-bottom: 12px;
+}
+
+/* Tabs */
+
+.widget-jsontocsv .jsontocsv-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border-color-default, #ced0d3);
+}
+
+.widget-jsontocsv .jsontocsv-tab {
+    padding: 6px 14px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    background: none;
+    color: var(--font-color-detail, #6c7180);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.widget-jsontocsv .jsontocsv-tab:hover {
+    color: var(--font-color-default, #0a1325);
+}
+
+.widget-jsontocsv .jsontocsv-tab-active {
+    border-bottom-color: var(--brand-primary, #264ae5);
+    color: var(--brand-primary, #264ae5);
+}
+
+/* Table */
+
+.widget-jsontocsv .jsontocsv-table-wrapper {
+    max-height: 420px;
+    overflow: auto;
+    border: 1px solid var(--border-color-default, #ced0d3);
+    border-radius: 4px;
+}
+
+.widget-jsontocsv .jsontocsv-table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+.widget-jsontocsv .jsontocsv-table th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--bg-color, #f8f8f8);
+    white-space: nowrap;
+}
+
+.widget-jsontocsv .jsontocsv-table th,
+.widget-jsontocsv .jsontocsv-table td {
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.widget-jsontocsv .jsontocsv-rownumber {
+    width: 1%;
+    color: var(--font-color-detail, #6c7180);
+    text-align: right;
+}
+
+.widget-jsontocsv .jsontocsv-paging {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--font-color-detail, #6c7180);
+}
+
+.widget-jsontocsv .jsontocsv-paging span {
+    margin-right: 4px;
+}
+
+/* CSV text */
+
+.widget-jsontocsv .jsontocsv-csv {
+    position: relative;
+}
+
+.widget-jsontocsv .jsontocsv-csv pre {
+    max-height: 420px;
+    margin: 0;
+    padding: 12px;
+    overflow: auto;
+    border: 1px solid var(--border-color-default, #ced0d3);
+    border-radius: 4px;
+    background: #f6f8fa;
+    font-size: 0.9em;
+    white-space: pre;
+}
+
+.widget-jsontocsv .jsontocsv-copy {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+/* Messages and empty states */
+
+.widget-jsontocsv .jsontocsv-empty,
+.widget-jsontocsv .jsontocsv-message {
+    padding: 12px 16px;
+    border: 1px dashed var(--border-color-default, #ced0d3);
+    border-radius: 4px;
+    color: var(--font-color-detail, #6c7180);
+}
+
+.widget-jsontocsv .jsontocsv-message {
+    align-self: stretch;
+}
+
+.widget-jsontocsv .jsontocsv-message-error {
+    border-style: solid;
+    border-color: var(--brand-danger, #e33f4e);
+    color: var(--brand-danger, #e33f4e);
+}
+
+/* Delimiter selection and download button */
+
+.widget-jsontocsv .jsontocsv-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.widget-jsontocsv .jsontocsv-delimiter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.widget-jsontocsv .jsontocsv-delimiter label {
+    margin: 0;
+    font-weight: 600;
+}
+
+.widget-jsontocsv .jsontocsv-delimiter select {
+    width: auto;
+    min-width: 150px;
+}
+
+.widget-jsontocsv .jsontocsv-delimiter-other {
+    width: 80px;
+}
+
+/* Download button */
+
+.widget-jsontocsv .jsontocsv-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.widget-jsontocsv .jsontocsv-download-icon {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (max-width: 576px) {
+    .widget-jsontocsv .jsontocsv-preview-header {
+        flex-wrap: wrap;
+    }
+
+    .widget-jsontocsv .jsontocsv-paging {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}

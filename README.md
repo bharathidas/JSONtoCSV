@@ -47,6 +47,8 @@ Download `mendix.JSONtoCSV.mpk` from the [Releases](https://github.com/bharathid
 3. Place the **JSONto CSV** widget in a data view of that entity and select the attributes.
 4. Fill the data attribute, for example with a microflow that exports objects with an export mapping.
 
+**Sample module:** [`JSONtoCSVDemo.mpk`](https://github.com/bharathidas/JSONtoCSV/raw/main/JSONtoCSVDemo.mpk) (Studio Pro 10.24.17) contains a working example page, `JSONtoCSVDemo.Home_Web`, with test data and the 1.0.1 widget. Import it with **App > Import module package** and add the page to your navigation. It uses the `Atlas_Default` layout from Atlas_Core.
+
 **Upgrading from 1.0.0:** replace the `.mpk`, press F4, and choose **Update all widgets** when Studio Pro reports that the widget definition has changed.
 
 ## What's fixed in 1.0.1
